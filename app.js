@@ -12,7 +12,10 @@ function sum(a,b){ //eslint-disable-line
   return [mySum, myMsg];
 }
 
-//sum();
+
+
+//sum(4/7);
+
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -27,7 +30,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
-
+  var myProd = a * b;
+  var myMsg = 'The product of ' + a + ' and ' + b + ' is ' + myProd + '.';
+  return [myProd, myMsg];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -45,11 +50,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+  var mySum = a + b + c;
+  var myProd = a * b * c;
+  var sumMsg = a + ' and ' + b + ' and ' + c + ' sum to ' + mySum + '.';
+  var prodMsg = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + myProd + '.';
+  return [mySum, myProd, sumMsg, prodMsg];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -64,12 +73,16 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var mySum = 0;
+  for (var i = 0; i < testArray.length; i++) {
+    mySum += testArray[i];
+  }
+  return [mySum, testArray.toString() + ' was passed in as an array of numbers, and ' + mySum + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
