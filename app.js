@@ -12,7 +12,7 @@ function sum(a,b){ //eslint-disable-line
   return [mySum, myMsg];
 }
 
-sum();
+//sum();
 
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
@@ -82,10 +82,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(testArray){ //eslint-disable-line
-
+  var myProd = 1;
+  for (var i = 0; i < testArray.length; i++) {
+    myProd *= testArray[i];
+  }
+  return [myProd, 'The numbers ' + testArray.toString() + ' have a product of ' + myProd + '.'];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(2,3,4);
+testMultiplyArray(2,3,4);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
